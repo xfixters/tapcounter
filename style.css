@@ -1,0 +1,168 @@
+/* ==========================
+   CONFIGURACIÓN GENERAL
+   ========================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #111111;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* ==========================
+   CONTENEDOR
+   ========================== */
+
+.container {
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+
+/* ==========================
+   TÍTULO
+   ========================== */
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+/* ==========================
+   CONTADOR
+   ========================== */
+
+#counter {
+    font-size: clamp(80px, 25vw, 150px);
+    font-weight: 700;
+    line-height: 1;
+
+    margin-bottom: 40px;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* ==========================
+   BOTÓN TAP
+   ========================== */
+
+.tap-button {
+    width: min(75vw, 320px);
+    height: min(75vw, 320px);
+
+    border-radius: 50%;
+    border: none;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-size: 40px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    touch-action: manipulation;
+
+    transition: transform 0.08s ease;
+}
+
+
+/* Efecto al tocar */
+
+.tap-button:active {
+    transform: scale(0.93);
+}
+
+
+/* ==========================
+   BOTONES INFERIORES
+   ========================== */
+
+.controls {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+
+.controls button {
+    min-width: 110px;
+    height: 50px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #292929;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+
+    transition: transform 0.08s ease,
+                background 0.15s ease;
+}
+
+
+.controls button:active {
+    transform: scale(0.95);
+    background: #3a3a3a;
+}
+
+
+/* ==========================
+   PANTALLAS PEQUEÑAS
+   ========================== */
+
+@media (max-height: 700px) {
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    #counter {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+
+    .tap-button {
+        width: 230px;
+        height: 230px;
+    }
+
+    .controls {
+        margin-top: 20px;
+    }
+}
